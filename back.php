@@ -1,22 +1,26 @@
 <?php
-  // Initialiser la session
-  session_start();
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
-  if(!isset($_SESSION["name_user"])){
-    header("Location: login.php");
-    exit(); 
-  }
+// Initialiser la session
+session_start();
+// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+if (!isset($_SESSION["name_user"])) {
+  header("Location: login.php");
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
   <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="sucess">
+</head>
+
+<body>
+  <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['name_user']; ?>!</h1>
     <p>C'est votre tableau de bord.</p>
+    <p> Vous pouvez désa présent ajouter de nouvelles pizzas </p>
     <a href="logout.php">Déconnexion</a>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
