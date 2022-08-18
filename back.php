@@ -111,10 +111,10 @@ if (isset($_POST)) {
     <h2>Liste des produits</h2>
     <table>
       <thead>
+        <th>Photo</th>
         <th>Nom</th>
         <th>Description</th>
         <th>Prix</th>
-        <th>Image</th>
         <th>Base</th>
       </thead>
       <tbody>
@@ -122,10 +122,10 @@ if (isset($_POST)) {
         foreach ($result as $produit) {
         ?>
           <tr>
+            <td><img src="<?php echo $produit['img_pizza']; ?>" alt="" width="100" height="100"></td>
             <td><?= $produit['name_pizza'] ?></td>
             <td><?= $produit['description_pizza'] ?></td>
             <td><?= $produit['price_pizza'] ?></td>
-            <td><?= $produit['img_pizza'] ?></td>
             <td><?= $produit['base_pizza'] ?></td>
             <td><a href="update.php?id_pizza=<?= $produit['id_pizza'] ?>">Modifier</a> <a href="delete.php?id_pizza=<?= $produit['id_pizza'] ?>">Supprimer</a></td>
 
