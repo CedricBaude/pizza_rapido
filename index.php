@@ -31,27 +31,27 @@
     <h1>Bienvenu sur Pizza RAPIDO, les pizzas cuitent à l'eau </h1>
 
 
-        
 
 
-<?php
 
-// On inclut la connexion à la base
-require_once('settings/db.php');
+    <?php
 
-// On écrit notre requête
-$sql = 'SELECT * FROM `pizzas`';
+    // On inclut la connexion à la base
+    require_once('settings/db.php');
 
-// On prépare la requête
-$query = $db->prepare($sql);
+    // On écrit notre requête
+    $sql = 'SELECT * FROM `pizzas`';
 
-// On exécute la requête
-$query->execute();
+    // On prépare la requête
+    $query = $db->prepare($sql);
 
-// On stocke le résultat dans un tableau associatif
-$result = $query->fetchAll(PDO::FETCH_ASSOC);
+    // On exécute la requête
+    $query->execute();
 
-?>
+    // On stocke le résultat dans un tableau associatif
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    ?>
 
     <h1>Liste des produits</h1>
     <table>
@@ -63,22 +63,23 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
             <th>Base</th>
         </thead>
         <tbody>
-        <?php
-            foreach($result as $produit){
-        ?>
+            <?php
+            foreach ($result as $produit) {
+            ?>
                 <tr>
                     <td><?= $produit['name_pizza'] ?></td>
                     <td><?= $produit['description_pizza'] ?></td>
                     <td><?= $produit['price_pizza'] ?></td>
                     <td><?= $produit['img_pizza'] ?></td>
                     <td><?= $produit['base_pizza'] ?></td>
-                    
+
                 </tr>
-        <?php
+            <?php
             }
-        ?>
+            ?>
         </tbody>
     </table>
-    
+
 </body>
+
 </html>

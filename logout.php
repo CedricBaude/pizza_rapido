@@ -8,4 +8,3 @@
     // Redirection vers la page de connexion
     header("Location: index.php");
   }
-?>
