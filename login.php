@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    require('config.php');
+    require('settings/config.php');
     session_start();
 
     if (isset($_POST['name_user'])) {
@@ -38,7 +38,7 @@
         <?php if (!empty($message)) { ?>
             <p class="errorMessage"><?php echo $message; ?></p>
         <?php } ?>
-        <p>Retour</p>
+        <p><a href="index.php">Retour</a></p>
     </form>
 
 </body>
