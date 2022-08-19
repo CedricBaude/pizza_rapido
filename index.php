@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>🍕 Pizza RAPIDO, les pizzas cuite à l'eau 💦</title>
 </head>
 
@@ -28,7 +29,7 @@
 
         </div>
     </header>
-    <h1>Bienvenu sur Pizza RAPIDO, les pizzas cuitent à l'eau </h1>
+    <h1>Bienvenu sur Pizza RAPIDO, les pizzas cuites à l'eau !</h1>
 
 
 
@@ -53,35 +54,34 @@
 
     ?>
 
-    <h1>Liste des produits</h1>
-    <table>
-        <thead>
-            <th>Photo</th>
-            <th>Nom</th>
-            <th>Description</th>
-            <th>Prix</th>
-            <th>Base</th>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($result as $produit) {
-            ?>
-                <tr>
-                    <td><img src="<?php echo $produit['img_pizza']; ?>" alt="" width="100" height="100"></td>
-                    <td><?= $produit['name_pizza'] ?></td>
-                    <td><?= $produit['description_pizza'] ?></td>
-                    <td><?= $produit['price_pizza'] ?></td>
-                    <td><?= $produit['base_pizza'] ?></td>
 
 
+    <h2>Liste des produits</h2>
 
-                </tr>
-            <?php
-            }
-            ?>
-        </tbody>
-    </table>
+    <div class="container product_pizza">
 
+        <?php
+        foreach ($result as $produit) {
+        ?>
+            <div class="card_pizza">
+                <div class="picture_pizza">
+                    <img src="<?php echo $produit['img_pizza']; ?>" alt="" width="100" height="100">
+                </div>
+                <div class="name_pizza">
+                    <?= $produit['name_pizza'] ?>
+                </div>
+                <div class="desc_pizza">
+                    <?= $produit['description_pizza'] ?>
+                </div>
+                <div class="price_pizza">
+                    <?= $produit['price_pizza'] ?>€.
+                </div>
+            </div>
+        <?php
+        }
+        ?>
+
+    </div>
 </body>
 
 </html>

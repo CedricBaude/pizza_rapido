@@ -9,7 +9,9 @@ header {
     flex-direction: row;
     justify-content: flex-end;
 }
-
+h1, h2{
+    text-align: center;
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -130,4 +132,17 @@ p.errorMessage {
     padding: 5px 10px;
     color: black;
     border-radius: 3px;
+}
+.product_pizza{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card_pizza {
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: center;
 }
