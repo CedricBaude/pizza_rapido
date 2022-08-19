@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    require('settings/db.php');
+    require('settings/config.php');
     session_start();
 
     if (isset($_POST['name_user'])) {
