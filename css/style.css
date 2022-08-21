@@ -69,7 +69,7 @@ h2 {
 .titre_2 {}
 
 .bandeau {
-    background-image: url('../../pizza_rapido/img/pizza_bandeau_flou3.jpg');
+    background-image: url('../img/pizza_bandeau_flou3.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
