@@ -8,32 +8,49 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    background-color: #007aaf;
+    height: 70px;
+
+}
+header a {
+    text-decoration: none;
+    color: white;
 }
 h1, h2{
     text-align: center;
+    margin: 0 20px;
+
+}
+.titre_1{
+    margin: 30px 0;
 }
 .nav {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    height: 100%;
+
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    color: white;
+    height: 100%;
 
 }
 
 ul {
     display: flex;
     flex-direction: row;
+    height: 100%;
     width: 500px;
     padding-right: 20px;
 }
 
 li {
     width: 30%;
+    height: 100%;
+    line-height: 70px;
     text-decoration: none;
     list-style-type: none;
     text-align: right;
@@ -137,6 +154,8 @@ p.errorMessage {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
 }
 .card_pizza {
     height: auto;
@@ -145,6 +164,7 @@ p.errorMessage {
     flex-direction: column;
     margin: 20px;
     text-align: center;
-    border: #666 solid 1px;
+    border: rgb(153, 153, 153) solid 1px;
     border-radius: 20px;
+    padding: 20px;
 }

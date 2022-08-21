@@ -29,7 +29,7 @@
 
         </div>
     </header>
-    <h1>Bienvenu sur Pizza RAPIDO, les pizzas cuites à l'eau !</h1>
+    <h1 class="titre_1">Bienvenu sur Pizza RAPIDO, les pizzas cuites à l'eau !</h1>
 
 
 
@@ -56,7 +56,7 @@
 
 
 
-    <h2>Liste des produits</h2>
+    <h2 class="titre_2">Liste des produits</h2>
 
     <div class="container product_pizza">
 
