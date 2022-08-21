@@ -133,8 +133,9 @@ require('include/head.php');
 			<?php
 			}
 			?>
-			<a class="btn btn-secondary" href="index.php" role="button">Retour à l'accueil</a>
+			
 		</div>
+		<a class="btn btn-secondary" href="index.php" role="button">Retour à l'accueil</a>
 
 
 </body>
