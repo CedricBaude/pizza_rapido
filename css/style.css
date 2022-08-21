@@ -247,3 +247,7 @@ p.errorMessage {
     margin: 6px 0;
     font-weight: 500;
 }
+#back{
+    color: white;
+    margin-bottom: 20px;
+}

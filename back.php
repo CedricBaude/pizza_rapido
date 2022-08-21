@@ -54,7 +54,7 @@ require('include/head.php');
 ?>
 
 <body>
-	<a href="logout.php">Déconnexion</a>
+	
 	<div class="sucess">
 		<h1>Bienvenue <?php echo $_SESSION['name_user']; ?>!</h1> <br>
 		<p>Ceci est votre tableau de bord avec lequel vous pouvez ajouter de nouvelles pizzas, <br>les modifier ou tout simplement en supprimer.</p><br>
@@ -82,7 +82,7 @@ require('include/head.php');
 				<label for=" quantity_pizza">Quantité</label>
 				<input type="text" name="quantity_pizza" id="quantity_pizza" placeholder="Exemple: 10">
 
-				<button type="button" class="btn btn-secondary">Enregistrer</button>
+				<button class="btn btn-secondary">Enregistrer</button>
 			</form>
 		</div>
 		<br>
@@ -135,7 +135,8 @@ require('include/head.php');
 			?>
 			
 		</div>
-		<a class="btn btn-secondary" href="index.php" role="button">Retour à l'accueil</a>
+		<a class="btn btn-secondary" id="back" href="index.php" role="button">Retour à l'accueil</a>
+		<a class="btn btn-secondary" id="back"href="logout.php">Déconnexion</a>
 
 
 </body>
