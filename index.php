@@ -14,7 +14,7 @@
 
     <header>
         <div class="logo">
-
+            <img src="img/pizza_rapido_logo_50.png" alt="">
         </div>
         <div class="nav">
             <nav>
@@ -29,7 +29,7 @@
 
         </div>
     </header>
-    <h1 class="titre_1">Bienvenu sur Pizza RAPIDO, les pizzas cuites à l'eau !</h1>
+    <h1 class="titre_1"> 🍕 Pizza RAPIDO, les pizzas cuites à l'eau 💦</h1>
 
 
 
@@ -56,7 +56,7 @@
 
 
 
-    <h2 class="titre_2">Liste des produits</h2>
+    <h2 class="titre_2">Nos produits:</h2>
 
     <div class="container product_pizza">
 
@@ -65,13 +65,13 @@
         ?>
             <div class="card_pizza">
                 <div class="picture_pizza">
-                    <img src="<?php echo $produit['img_pizza']; ?>" alt="" width="100" height="100">
+                    <img src="<?php echo $produit['img_pizza']; ?>" alt="" >
                 </div>
                 <div class="name_pizza">
                     <?= $produit['name_pizza'] ?>
                 </div>
                 <div class="desc_pizza">
-                    <?= $produit['description_pizza'] ?>
+                    <i><?= $produit['description_pizza'] ?></i>
                 </div>
                 <div class="price_pizza">
                     <?= $produit['price_pizza'] ?>€.

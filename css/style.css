@@ -7,23 +7,22 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     background-color: #007aaf;
-    height: 70px;
+    height: 80px;
 
 }
+
 header a {
     text-decoration: none;
     color: white;
 }
-h1, h2{
-    text-align: center;
-    margin: 0 20px;
 
+.logo {
+    height: 80px;
+    margin-top: 6px;
 }
-.titre_1{
-    margin: 30px 0;
-}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -50,10 +49,23 @@ ul {
 li {
     width: 30%;
     height: 100%;
-    line-height: 70px;
+    line-height: 80px;
     text-decoration: none;
     list-style-type: none;
     text-align: right;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 0 20px;
+
+}
+.titre_1 {
+    margin: 40px 0;
+}
+.titre_2 {
+    
 }
 
 .connection {
@@ -150,21 +162,45 @@ p.errorMessage {
     color: black;
     border-radius: 3px;
 }
-.product_pizza{
+
+.product_pizza {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
 }
+
 .card_pizza {
     height: auto;
-    width: 400px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     margin: 20px;
     text-align: center;
-    border: rgb(153, 153, 153) solid 1px;
-    border-radius: 20px;
-    padding: 20px;
+    /*border: rgb(153, 153, 153) solid 1px;
+    border-radius: 20px;*/
+    padding: 30px 20px;
+}
+
+.picture_pizza img {
+    width: 120px;
+    height: 120px;
+}
+
+.name_pizza {
+    margin: 6px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+}
+
+.desc_pizza {
+    margin: 6px 0;
+    color: #666;
+}
+
+.price_pizza {
+    margin: 6px 0;
+    font-weight: 500;
 }
