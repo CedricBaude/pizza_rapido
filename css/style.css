@@ -9,7 +9,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     background-color: #007aaf;
-    height: 80px;
+    height: 50px;
 
 }
 
@@ -49,7 +49,7 @@ ul {
 li {
     width: 30%;
     height: 100%;
-    line-height: 80px;
+    line-height: 50px;
     text-decoration: none;
     list-style-type: none;
     text-align: right;
@@ -61,11 +61,39 @@ h2 {
     margin: 0 20px;
 
 }
+
 .titre_1 {
-    margin: 40px 0;
+    /*margin: 40px 0;*/
 }
-.titre_2 {
-    
+
+.titre_2 {}
+
+.bandeau {
+    background-image: url('../../pizza_rapido/img/pizza_bandeau_flou3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.bandeau .titre_1 {
+    font-family: 'Chewy', cursive;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+
+.bandeau_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo_bandeau img{
+    width: 147px;
+    height: 200px;
 }
 
 .connection {
@@ -161,12 +189,13 @@ p.errorMessage {
     color: black;
     border-radius: 3px;
 }
-.form_add_pizza{
+
+.form_add_pizza {
     display: flex;
     justify-content: center;
 }
 
-.add_pizza{
+.add_pizza {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -180,13 +209,14 @@ p.errorMessage {
     justify-content: center;
     margin-top: 50px;
 }
+
 .product_pizza a {
     color: white;
 }
 
 .card_pizza {
     height: auto;
-    width: 360px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     margin: 20px;

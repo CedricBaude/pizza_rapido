@@ -9,7 +9,7 @@ require('include/head.php');
 
     <header>
         <div class="logo">
-            <img src="img/pizza_rapido_logo_50.png" alt="">
+        
         </div>
         <div class="nav">
             <nav>
@@ -24,7 +24,15 @@ require('include/head.php');
 
         </div>
     </header>
-    <h1 class="titre_1"> 🍕 Pizza RAPIDO, les pizzas cuites à l'eau 💦</h1>
+    <div class="bandeau">
+        <div class="bandeau_content">
+            <div class="logo_bandeau">
+                <img src="img/pizza_rapido_logo.png" alt="">
+            </div>
+            <h1 class="titre_1"> Pizza RAPIDO <br>Les pizzas cuites à l'eau !</h1>
+        </div>
+    </div>
+
 
 
 
@@ -51,7 +59,7 @@ require('include/head.php');
 
 
 
-    <h2 class="titre_2">Nos produits:</h2>
+    <h2 class="titre_2">Découvrez nos pizzas</h2>
 
     <div class="container product_pizza">
 
@@ -60,7 +68,7 @@ require('include/head.php');
         ?>
             <div class="card_pizza">
                 <div class="picture_pizza">
-                    <img src="<?php echo $produit['img_pizza']; ?>" alt="" >
+                    <img src="<?php echo $produit['img_pizza']; ?>" alt="">
                 </div>
                 <div class="name_pizza">
                     <?= $produit['name_pizza'] ?>
