@@ -145,4 +145,6 @@ p.errorMessage {
     flex-direction: column;
     margin: 20px;
     text-align: center;
+    border: #666 solid 1px;
+    border-radius: 20px;
 }
