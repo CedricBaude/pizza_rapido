@@ -44,6 +44,36 @@ if (isset($_POST)) {
 		header('Location: back.php');
 	}
 }
+if(isset($_FILES['file'])){
+    $tmpName = $_FILES['file']['tmp_name'];
+    $name = $_FILES['file']['name'];
+    $size = $_FILES['file']['size'];
+    $error = $_FILES['file']['error'];
+
+    $tabExtension = explode('.', $name);
+    $extension = strtolower(end($tabExtension));
+
+    $extensions = ['jpg', 'png', 'jpeg', 'gif'];
+    $maxSize = 400000;
+
+    if(in_array($extension, $extensions) && $size <= $maxSize && $error == 0){
+
+        $uniqueName = uniqid('', true);
+        //uniqid génère quelque chose comme ca : 5f586bf96dcd38.73540086
+        $file = $uniqueName.".".$extension;
+        //$file = 5f586bf96dcd38.73540086.jpg
+
+        move_uploaded_file($tmpName, './img/'.$file);
+
+        $req = $db->prepare('INSERT INTO `pizzas` (`img_pizza`) VALUES (?)');
+        $req->execute([$file]);
+
+        echo "Image enregistrée";
+    }
+    else{
+        echo "Une erreur est survenue";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -60,7 +90,7 @@ require('include/head.php');
 		<p>Ceci est votre tableau de bord avec lequel vous pouvez ajouter de nouvelles pizzas, <br>les modifier ou tout simplement en supprimer.</p><br>
 		<h2> Ajouter de nouvelles pizzas </h2>
 		<div class="container form_add_pizza">
-			<form method="post" class="add_pizza">
+			<form method="post" class="add_pizza" enctype="multipart/form-data">
 				<label for="name_pizza">Nom de la pizza</label>
 				<input type="text" name="name_pizza" id="name_pizza" placeholder="Exemple: Pizza 1">
 
@@ -81,6 +111,8 @@ require('include/head.php');
 
 				<label for=" quantity_pizza">Quantité</label>
 				<input type="text" name="quantity_pizza" id="quantity_pizza" placeholder="Exemple: 10">
+
+				
 
 				<button class="btn btn-secondary">Enregistrer</button>
 			</form>
