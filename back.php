@@ -49,13 +49,9 @@ if (isset($_POST)) {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css" />
-	<title>Document</title>
-</head>
+<?php
+require('include/head.php');
+?>
 
 <body>
 	<a href="logout.php">Déconnexion</a>
@@ -108,35 +104,34 @@ if (isset($_POST)) {
 		require_once('settings/close.php');
 		?>
 
-		<h2>Liste des produits</h2>
-		<table>
-			<thead>
-				<th>Photo</th>
-				<th>Nom</th>
-				<th>Description</th>
-				<th>Prix</th>
-				<th>Base</th>
-			</thead>
-			<tbody>
-				<?php
-				foreach ($result as $produit) {
-				?>
-					<tr>
-						<td><img src="<?php echo $produit['img_pizza']; ?>" alt="" width="100" height="100"></td>
-						<td><?= $produit['name_pizza'] ?></td>
-						<td><?= $produit['description_pizza'] ?></td>
-						<td><?= $produit['price_pizza'] ?></td>
-						<td><?= $produit['base_pizza'] ?></td>
-						<td><a href="update.php?id_pizza=<?= $produit['id_pizza'] ?>">Modifier</a> <a href="delete.php?id_pizza=<?= $produit['id_pizza'] ?>">Supprimer</a></td>
+		<h2 class="titre_2">Nos produits:</h2>
 
-					</tr>
+		<div class="container product_pizza">
 
-				<?php
-				}
-				?>
-
-
-	</div>
+			<?php
+			foreach ($result as $produit) {
+			?>
+				<div class="card_pizza">
+					<div class="picture_pizza">
+						<img src="<?php echo $produit['img_pizza']; ?>" alt="">
+					</div>
+					<div class="name_pizza">
+						<?= $produit['name_pizza'] ?>
+					</div>
+					<div class="desc_pizza">
+						<i><?= $produit['description_pizza'] ?></i>
+					</div>
+					<div class="price_pizza">
+						<?= $produit['price_pizza'] ?>€.
+					</div>
+					<div class="edit_pizza">
+					<a href="update.php?id_pizza=<?= $produit['id_pizza'] ?>">Modifier</a> <a href="delete.php?id_pizza=<?= $produit['id_pizza'] ?>">Supprimer</a>
+					</div>
+				</div>
+			<?php
+			}
+			?>
+		</div>
 
 
 </body>
