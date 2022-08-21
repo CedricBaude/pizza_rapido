@@ -56,33 +56,35 @@ require('include/head.php');
 <body>
 	<a href="logout.php">Déconnexion</a>
 	<div class="sucess">
-		<h1>Bienvenue <?php echo $_SESSION['name_user']; ?>!</h1>
-		<p>C'est votre tableau de bord.</p><br>
+		<h1>Bienvenue <?php echo $_SESSION['name_user']; ?>!</h1> <br>
+		<p>Ceci est votre tableau de bord avec lequel vous pouvez ajouter de nouvelles pizzas, <br>les modifier ou tout simplement en supprimer.</p><br>
 		<h2> Ajouter de nouvelles pizzas </h2>
-		<form method="post">
-			<label for="name_pizza">Nom de la pizza</label>
-			<input type="text" name="name_pizza" id="name_pizza">
+		<div class="container form_add_pizza">
+			<form method="post" class="add_pizza">
+				<label for="name_pizza">Nom de la pizza</label>
+				<input type="text" name="name_pizza" id="name_pizza" placeholder="Exemple: Pizza 1">
 
-			<label for="description_pizza">Description</label>
-			<input type="text" name="description_pizza" id="description_pizza">
+				<label for="description_pizza">Description</label>
+				<input type="text" name="description_pizza" id="description_pizza" placeholder="Description de la pizza">
 
-			<label for="price_pizza">Prix</label>
-			<input type="text" name="price_pizza" id="price_pizza">
+				<label for="price_pizza">Prix</label>
+				<input type="text" name="price_pizza" id="price_pizza" placeholder="Exemple: 10">
 
-			<label for="img_pizza">Photo</label>
-			<input type="text" name="img_pizza" id="img_pizza">
+				<label for="img_pizza">Photo</label>
+				<input type="text" name="img_pizza" id="img_pizza" placeholder="Ecrivez pour l'instant: Non">
 
-			<label for="base_pizza">Base</label>
-			<input type="text" name="base_pizza" id="base_pizza">
+				<label for="base_pizza">Base</label>
+				<input type="text" name="base_pizza" id="base_pizza" placeholder="Exemple: Créme">
 
-			<label for="promo_pizza">Promo</label>
-			<input type="text" name="promo_pizza" id="promo_pizza">
+				<label for="promo_pizza">Promo</label>
+				<input type="text" name="promo_pizza" id="promo_pizza" placeholder="Ecrivez pour l'instant: Non"">
 
-			<label for="quantity_pizza">Quantité</label>
-			<input type="text" name="quantity_pizza" id="quantity_pizza">
+				<label for=" quantity_pizza">Quantité</label>
+				<input type="text" name="quantity_pizza" id="quantity_pizza" placeholder="Exemple: 10">
 
-			<button>Enregistrer</button>
-		</form>
+				<button type="button" class="btn btn-secondary">Enregistrer</button>
+			</form>
+		</div>
 		<br>
 
 		<?php
@@ -103,8 +105,8 @@ require('include/head.php');
 
 		require_once('settings/close.php');
 		?>
-
-		<h2 class="titre_2">Nos produits:</h2>
+		<br>
+		<h2 class="titre_2">Pizzas disponible à la modification:</h2>
 
 		<div class="container product_pizza">
 
@@ -125,12 +127,13 @@ require('include/head.php');
 						<?= $produit['price_pizza'] ?>€.
 					</div>
 					<div class="edit_pizza">
-					<a href="update.php?id_pizza=<?= $produit['id_pizza'] ?>">Modifier</a> <a href="delete.php?id_pizza=<?= $produit['id_pizza'] ?>">Supprimer</a>
+						<a class="btn btn-secondary" href="update.php?id_pizza=<?= $produit['id_pizza'] ?>">Modifier</a> <a class="btn btn-secondary" href="delete.php?id_pizza=<?= $produit['id_pizza'] ?>">Supprimer</a>
 					</div>
 				</div>
 			<?php
 			}
 			?>
+			<a class="btn btn-secondary" href="index.php" role="button">Retour à l'accueil</a>
 		</div>
 
 

@@ -161,6 +161,17 @@ p.errorMessage {
     color: black;
     border-radius: 3px;
 }
+.form_add_pizza{
+    display: flex;
+    justify-content: center;
+}
+
+.add_pizza{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
 
 .product_pizza {
     display: flex;
@@ -168,6 +179,9 @@ p.errorMessage {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
+}
+.product_pizza a {
+    color: white;
 }
 
 .card_pizza {

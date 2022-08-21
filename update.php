@@ -17,7 +17,7 @@ require('include/head.php');
 ?>
 
 <body>
-    <p>Modifier les pizzas existantes</p>
+    <h2>Modifier une pizza</h2>
 
     <?php
     require_once('settings/db.php');
@@ -79,34 +79,35 @@ require('include/head.php');
 
     ?>
 
-    <h1>Modifier un produit</h1>
-    <form method="post">
-        <label for="name_pizza">Nom de la pizza</label>
-        <input type="text" name="name_pizza" id="name_pizza">
+    <div class="container form_add_pizza">
+			<form method="post" class="add_pizza">
+				<label for="name_pizza">Nom de la pizza</label>
+				<input type="text" name="name_pizza" id="name_pizza" placeholder="Exemple: Pizza 1">
 
-        <label for="description_pizza">Description</label>
-        <input type="text" name="description_pizza" id="description_pizza">
+				<label for="description_pizza">Description</label>
+				<input type="text" name="description_pizza" id="description_pizza" placeholder="Description de la pizza">
 
-        <label for="price_pizza">Prix</label>
-        <input type="text" name="price_pizza" id="price_pizza">
+				<label for="price_pizza">Prix</label>
+				<input type="text" name="price_pizza" id="price_pizza" placeholder="Exemple: 10">
 
-        <label for="img_pizza">Photo</label>
-        <input type="text" name="img_pizza" id="img_pizza">
+				<label for="img_pizza">Photo</label>
+				<input type="text" name="img_pizza" id="img_pizza" placeholder="Ecrivez pour l'instant: Non">
 
-        <label for="base_pizza">Base</label>
-        <input type="text" name="base_pizza" id="base_pizza">
+				<label for="base_pizza">Base</label>
+				<input type="text" name="base_pizza" id="base_pizza" placeholder="Exemple: Créme">
 
-        <label for="promo_pizza">Promo</label>
-        <input type="text" name="promo_pizza" id="promo_pizza">
+				<label for="promo_pizza">Promo</label>
+				<input type="text" name="promo_pizza" id="promo_pizza" placeholder="Ecrivez pour l'instant: Non"">
 
-        <label for="quantity_pizza">Quantité</label>
-        <input type="text" name="quantity_pizza" id="quantity_pizza">
+				<label for=" quantity_pizza">Quantité</label>
+				<input type="text" name="quantity_pizza" id="quantity_pizza" placeholder="Exemple: 10">
 
-        <input type="hidden" name="id_pizza" value="<?= $result['id_pizza'] ?>">
-
-        <button>Enregistrer</button>
-
-    </form>
+				<button type="button" class="btn btn-secondary">Enregistrer</button>
+                <br>
+                <a class="btn btn-secondary" href="index.php" role="button">Retour à l'accueil</a>
+			</form>
+            <br>
+		</div>
 
 </body>
 
